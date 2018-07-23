@@ -1,0 +1,13 @@
+{
+    "name": "mva/brain-games",
+    "bin": ["bin/brain-games"],
+    "type": "games",
+    "description": "My first project brain-games",
+    "authors": [
+        {
+            "name": "Moiseenko Vladimir",
+            "email": "mvaload@gmail.com"
+        }
+    ],
+    "require": {}
+}
