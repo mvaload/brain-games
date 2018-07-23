@@ -1,5 +1,5 @@
 {
-    "name": "mva/brain-games",
+    "name": "mvaload/brain-games",
     "bin": ["bin/brain-games"],
     "type": "games",
     "description": "My first project brain-games",
