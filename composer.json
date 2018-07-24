@@ -1,7 +1,10 @@
 {
     "name": "mvaload/brain-games",
     "license": "MIT",
-    "bin": ["bin/brain-games"],
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even"
+    ],
     "type": "project",
     "keywords": ["cli", "games", "brain"],
     "description": "My first project brain-games",
