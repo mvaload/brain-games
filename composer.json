@@ -1,5 +1,7 @@
 {
     "name": "mvaload/brain-games",
+    "version": "0.1.0",
+    "license": "MIT",
     "bin": ["bin/brain-games"],
     "type": "games",
     "description": "My first project brain-games",

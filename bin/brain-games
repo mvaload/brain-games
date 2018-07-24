@@ -2,6 +2,4 @@
 
 <?php
 
-require_once __DIR__ . '/../autoload.php';
-
 echo 'Welcome to the Brain Games!' . PHP_EOL;
