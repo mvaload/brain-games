@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace BrainGames\Cli;
 
