@@ -3,6 +3,7 @@
     "license": "MIT",
     "bin": ["bin/brain-games"],
     "type": "games",
+    "keywords": ["cli", "games", "brain"],
     "description": "My first project brain-games",
     "authors": [
         {
