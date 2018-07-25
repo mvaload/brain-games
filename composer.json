@@ -2,7 +2,8 @@
     "name": "mvaload/brain-games",
     "license": "MIT",
     "bin": [
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "type": "project",
     "keywords": ["cli", "games", "brain"],
@@ -19,7 +20,8 @@
     "autoload": {
         "files":[
             "src/Cli.php",
-            "src/games/even.php"
+            "src/games/even.php",
+            "src/games/calc.php"
         ]
     },
     "require": {
