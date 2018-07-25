@@ -34,5 +34,5 @@ function getCalculate($number1, $number2, $operator)
         case '*':
             return $number1 * $number2;
             break;
-    }  
+    }
 }
