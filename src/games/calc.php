@@ -5,30 +5,34 @@ namespace BrainGames\Games\calc;
 use function \BrainGames\Cli\playGame;
 
 const DESCRIPTION = "What is the result of the expression?";
+const OPERATORS = ['+', '-', '*'];
 
 function run()
 {
-    $question = function () {
-        $operation = ['+', '-', '*'];
-        $operator = $operation[array_rand($operation)];
+    $getGameData = function () {
         $number1 = rand(1, 20);
         $number2 = rand(1, 20);
-        return "{$number1} {$operator} {$number2}";
-    };
-    $carrectAnswer = function ($question) {
-        list($number1, $operator, $number2) = explode(' ', $question);
+        $operator = OPERATORS[rand(0, 2)];
 
-        switch ($operator) {
-            case '+':
-                return $number1 + $number2;
-                break;
-            case '-':
-                return $number1 - $number2;
-                break;
-            case '*':
-                return $number1 * $number2;
-                break;
-        }
+        return array(
+            "question" => "{$number1} {$operator} {$number2}",
+            "right_answer" => getCalculate($number1, $number2, $operator)
+        );
     };
-    playGame(DESCRIPTION, $question, $carrectAnswer);
+    playGame(DESCRIPTION, $getGameData);
+}
+
+function getCalculate($number1, $number2, $operator)
+{
+    switch ($operator) {
+        case '+':
+            return $number1 + $number2;
+            break;
+        case '-':
+            return $number1 - $number2;
+            break;
+        case '*':
+            return $number1 * $number2;
+            break;
+    }  
 }
