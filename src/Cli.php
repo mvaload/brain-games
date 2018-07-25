@@ -7,26 +7,28 @@ use function \cli\prompt;
 
 const COUNT_QUESTIONS = 3;
 
-function playGame($description, $question, $correctAnswer)
+function playGame($description, $getGameData)
 {
     line('Welcome to the Brain Games!');
     line($description . PHP_EOL);
-    $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    $userName = prompt('May I have your name?');
+    line("Hello, %s!", $userName);
 
     for ($i = 0; $i < COUNT_QUESTIONS; $i++) {
-        $quest = $question();
-        line("Question: %s", $quest);
-        $answer = prompt("Your answer", 0);
-        $rightAnswer = $correctAnswer($quest);
-        if ($rightAnswer == $answer) {
+        $gameData = $getGameData();
+        $question = $gameData["question"];
+        $rightAnswer = $gameData["right_answer"];
+        line("Question: %s", $question);
+        $userAnswer = prompt("Your answer: ");
+
+        if ($rightAnswer == $userAnswer) {
             line("Correct!");
         } else {
-            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $rightAnswer);
-            line("Let's try again, %s!", $name);
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $rightAnswer);
+            line("Let's try again, %s!", $userName);
             return;
         }
     }
-    line("Congratulations, %s!", $name);
+    line("Congratulations, %s!", $userName);
     return;
 }
