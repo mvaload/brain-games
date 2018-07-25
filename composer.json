@@ -2,7 +2,6 @@
     "name": "mvaload/brain-games",
     "license": "MIT",
     "bin": [
-        "bin/brain-games",
         "bin/brain-even"
     ],
     "type": "project",
@@ -18,7 +17,10 @@
         "phpcs": "phpcs"
     },
     "autoload": {
-        "files":["src/Cli.php"]
+        "files":[
+            "src/Cli.php",
+            "src/games/even.php"
+        ]
     },
     "require": {
         "wp-cli/php-cli-tools": "^0.11.9"
