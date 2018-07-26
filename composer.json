@@ -25,7 +25,7 @@
             "src/games/even.php",
             "src/games/calc.php",
             "src/games/gcd.php",
-            "src/games/balance"
+            "src/games/balance.php"
         ]
     },
     "require": {
