@@ -15,8 +15,8 @@ function run()
         $operator = OPERATORS[rand(0, 2)];
 
         return array(
-            "question" => "{$number1} {$operator} {$number2}",
-            "right_answer" => getCalculate($number1, $number2, $operator)
+            "question" => (string) "{$number1} {$operator} {$number2}",
+            "rightAnswer" => (string) getCalculate($number1, $number2, $operator)
         );
     };
     playGame(DESCRIPTION, $getGameData);

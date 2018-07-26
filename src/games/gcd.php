@@ -13,8 +13,8 @@ function run()
         $number2 = rand(0, 20);
 
         return array(
-            "question" => "{$number1} {$number2}",
-            "right_answer" => getGCD($number1, $number2)
+            "question" => (string) "{$number1} {$number2}",
+            "rightAnswer" => (string) getGCD($number1, $number2)
 
         );
     };
