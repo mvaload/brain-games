@@ -15,7 +15,7 @@ function playGame($description, $getGameData)
     line("Hello, %s!", $userName);
 
     for ($i = 0; $i < COUNT_QUESTIONS; $i++) {
-        extract($getGameData());
+        ["question" => $question, "rightAnswer" => $rightAnswer] = $getGameData();
         line("Question: %s", $question);
         $userAnswer = prompt("Your answer");
 
