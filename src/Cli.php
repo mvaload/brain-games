@@ -15,13 +15,11 @@ function playGame($description, $getGameData)
     line("Hello, %s!", $userName);
 
     for ($i = 0; $i < COUNT_QUESTIONS; $i++) {
-        $gameData = $getGameData();
-        $question = $gameData["question"];
-        $rightAnswer = $gameData["right_answer"];
+        extract($getGameData());
         line("Question: %s", $question);
-        $userAnswer = prompt("Your answer: ");
+        $userAnswer = prompt("Your answer");
 
-        if ($rightAnswer == $userAnswer) {
+        if ($rightAnswer === $userAnswer) {
             line("Correct!");
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $rightAnswer);
