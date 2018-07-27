@@ -1,20 +1,20 @@
 
- ### Console Brain Games   
+ ## Console Brain Games   
 ___
 [![Maintainability](https://api.codeclimate.com/v1/badges/abeaf87357fc6ff6f234/maintainability)](https://codeclimate.com/github/mvaload/project-lvl1-s312/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/abeaf87357fc6ff6f234/test_coverage)](https://codeclimate.com/github/mvaload/project-lvl1-s312/test_coverage) [![Build Status](https://travis-ci.org/mvaload/project-lvl1-s312.svg?branch=master)](https://travis-ci.org/mvaload/project-lvl1-s312)   
 
 ___
-**installation**   
+### installation   
 ___
-composer global require mvaload/brain-games   
+**composer global require mvaload/brain-games**   
 
 ___
-**Description**   
+### Description  
 ___
 In each game, 3 questions are asked, it is necessary to correctly answer 3 questions,   
 to win the game. The first wrong answer ends the game.
 ___
-**Games list**  
+### Games list  
 ___
 - brain-even - specify if the number is even or not.
 - brain-calc - find the result of simple math expression
